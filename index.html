@@ -11,15 +11,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/scripts/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body id="body">
     <center>
         <img src="assets/images/blank-prp.png" id="ytimage" height="140" width="140" style="width: calc(5em + 5vw) !important; height: calc(5em + 5vw) !important;border-radius: 50%;border:solid #ffffff 2px;">
 
-        <h1 id="username">Loading...</h1>
+        
+        <h1 id="username">
+            <p id="channelCountry"></p>
+            <p id="channelName">UserName</p>
+        </h1>
         <h1 class="odometer" id="odometer"></h1>
+
+
         <br>
+
         <div class="container">
             <div class="boxThing2">
                 <h1 id="title2">Total Views</h1>
@@ -38,9 +46,9 @@
             </div>
 
         </div>
-V0.0.3
+V0.0.4
 
-Added: channel Image | Dynamic Title
+Added: Country Flag For Eligible Channels
 </body>
 
 <script src="assets/scripts/js/base.js"></script>
