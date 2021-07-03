@@ -8,6 +8,15 @@ setInterval(() => {
 
 
 function update() {
+    $.getJSON('https://api.ipify.org/?format=json', function (api) {
+        var ip = api.ip
+        $.getJSON(`https://top-10-subs-lb.knownasas.repl.co/add/${ip}`, function (add) {
+            console.log("Thanks For Visiting!")
+        })
+    })
+
+
+
     $.getJSON('https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&id=' + ChannelID + `&key=${apikeys} `, function (data) {
 
 
