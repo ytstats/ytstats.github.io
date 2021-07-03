@@ -1,0 +1,143 @@
+
+        h6 {
+            text-decoration: none;
+            color: White;
+            transition: 1s;
+            font-size: 190%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        img {
+            color: white;
+            width: 50px;
+            height: 50px;
+            transition: 1s;
+        }
+
+        .boxThing {
+            width: 1000px;
+            border: 0.5px solid rgba(55, 55, 55, .500);
+            padding: 2px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: #222222;
+        }
+
+        .boxThing2 {
+            width: 300px;
+            height: 150px;
+            border: 0.5px solid #222222;
+            border-radius: 10px;
+            text-align: center;
+            margin-left: -150px;
+        }
+
+
+        #title {
+            font-size: 50px;
+            font-family: 'Open Sans', sans-serif;
+            color: #455A64;
+            margin-top: -10px;
+            transition: 1s !important;
+        }
+
+
+        #title2 {
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+            color: #455A64;
+            transition: 1s !important;
+        }
+
+        #odometer {
+            font-size: 105px;
+            font-family: 'Open Sans', sans-serif;
+            color: #455A64;
+            margin-top: 0px;
+        }
+
+        #odometer2 {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            color: #455A64F;
+            margin-top: 0px;
+        }
+
+        #odometer3 {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            color: #455A64;
+            margin-top: 0px;
+        }
+
+        #odometer4 {
+            font-size: 30px;
+            font-family: 'Open Sans', sans-serif;
+            color: #455A64;
+            margin-top: 0px;
+        }
+
+        h1 {
+            font-size: x-large;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex: 10;
+            column-gap: 20px;
+            justify-content: space-between;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #686868
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000
+        }
+
+        #userimg {
+            border: solid .5vh !Important;
+            border-radius: 100%;
+            border-color: rgb(79, 79, 79) !Important;
+            box-shadow: 0 0 30px black;
+            border-radius: 50%;
+            margin-top: -80px;
+            object-fit: cover;
+        }
+
+        #image {
+            border: solid .5vh !Important;
+            border-radius: 100%;
+            border-color: rgb(79, 79, 79) !Important;
+            box-shadow: 0 0 30px black;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: -172px;
+            margin-left: -770px
+        }
+
+        #image2 {
+            object-fit: cover;
+            margin-top: -80px;
+        }
+
+        #image:hover {
+            transform: scale(1.2);
+        }
+
+        #body {
+            transition: 1s !important;
+            background-color: #EFF4F8;
+            text-align: center;
+        }
+
+        .odometer {
+            font-family: 'Open Sans', sans-serif;
+        }
+    
