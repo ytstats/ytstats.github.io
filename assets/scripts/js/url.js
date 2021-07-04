@@ -3,11 +3,11 @@ var thislocation = window.location.href +"/"
 
 window.onload = function () {
 
-    loadURL();
+ loadURL();
     
 }
 
-function loadURL() {
+ function loadURL() {
 
 	var q = location.hash.split("!/")[1];
     
