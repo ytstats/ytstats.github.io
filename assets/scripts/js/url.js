@@ -1,5 +1,5 @@
 
-var Thislocation = window.location.href +"/"
+var thislocation = window.location.href +"/"
 
 window.onload = function () {
 
@@ -23,5 +23,5 @@ window.onload = function () {
 
 	
         history.pushState(null, null, "#!/" + ChannelID);
-		return Thislocation + "#!/" + ChannelID;
+		return thislocation + "#!/" + ChannelID;
 }

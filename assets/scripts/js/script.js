@@ -34,7 +34,7 @@ function update() {
         document.getElementById("ytbanner").src = data.userList[0].user.banner;
         document.getElementById('visitlink').href = 'https://www.youtube.com/channel/'+data.userList[0].user.id
 
-        document.getElementById("sharelink").value = Thislocation + data.userList[0].user.id
+        document.getElementById("sharelink").value = "https://ytstats.github.io/#!/" + data.userList[0].user.id
 
 
         // document.getElementById("pageIcon").src = data.items[0].brandingSettings.channel.image.bannerExternalUrl;
