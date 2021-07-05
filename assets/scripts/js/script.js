@@ -1,6 +1,7 @@
 
-var apikeys = "AIzaSyCwP6lcQH4K_yG3cNK0OI_ziqDqc0ucJIQ"
-const interval = 1500
+
+
+const interval = 1000
 
 
 setInterval(() => {
@@ -10,32 +11,51 @@ setInterval(() => {
 
 function update() {
 
+    
+    $.getJSON('https://beta.mixerno.space/api/youtube-subscriber-counter/channel/' + ChannelID, function (data) {
 
-    $.getJSON('https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&id=' + ChannelID + `&key=${apikeys} `, function (data) {
+    
 
-        document.title = data.items[0].snippet.title + " | YtStats";
+        document.title = data.userList[0].user.name + " | YtStats";
 
-        document.getElementById("channelName").innerText = data.items[0].snippet.title
+        
+
+        document.getElementById("channelName").innerText = data.userList[0].user.name
+        document.getElementById("shareChannel").innerText = data.userList[0].user.name
+
+        document.getElementById("subscribers").innerText = data.userList[0].stats.subscriberCountAPI || data.userList[0].stats.subscriberCount
+        document.getElementById("views").innerText = data.userList[0].stats.viewCount
+        document.getElementById("videos").innerText = data.userList[0].stats.videoCount
+        document.getElementById("goal").innerText = data.userList[0].stats.goalCount
 
 
-        document.getElementById("odometer").innerText = data.items[0].statistics.subscriberCount
-        document.getElementById("views").innerText = data.items[0].statistics.viewCount
-        document.getElementById("videos").innerText = data.items[0].statistics.videoCount
-        document.getElementById("goal").innerText = (Math.floor(GetGoal(data.items[0].statistics.subscriberCount)))
-        document.getElementById("ytimage").src = data.items[0].snippet.thumbnails.default.url;
-        document.getElementById("pageIcon").src = data.items[0].snippet.thumbnails.default.url;
+
+        document.getElementById("ytimage").src = data.userList[0].user.avatar.default.url;
+        document.getElementById("ytbanner").src = data.userList[0].user.banner;
+        document.getElementById('visitlink').href = 'https://www.youtube.com/channel/'+data.userList[0].user.id
+
+        document.getElementById("sharelink").value = Thislocation + data.userList[0].user.id
 
 
-        function GetGoal(count) {
-            if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
-          }
+        // document.getElementById("pageIcon").src = data.items[0].brandingSettings.channel.image.bannerExternalUrl;
 
-        if(data.items[0].snippet.country){
-            var cc = "flag-icon flag-icon-" + data.items[0].snippet.country.toLowerCase();
-            $("#channelCountry").addClass(cc)
-        } else {
-            return
-        }
+
+        // if(data.items[0].snippet.country){
+        //     var cc = "flag-icon flag-icon-" + data.items[0].snippet.country.toLowerCase();
+        //     $("#channelCountry").addClass(cc)
+        // } else {
+        //     return
+        // }
     })
 }
 
+function copysharelink() {
+    console.log("aaaaaa")
+    var copyText = document.getElementById("sharelink");
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+  
+  
+    document.execCommand("copy");
+};

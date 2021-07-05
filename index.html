@@ -5,50 +5,117 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link id="pageIcon" rel="icon" type="image/png" sizes="250x250" href="assets/images/blank-prp.png">
     <link rel=stylesheet href="assets/global/odometer.css">
-    <script src="https://mgcounts.com/assets/js/odometer.js"></script>
     <title>YtStats</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <link rel="stylesheet" href="assets/scripts/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+
 </head>
 
-<body  id="body">
-    <center>
-        <img src="assets/images/blank-prp.png" id="ytimage" height="140" width="140" style="width: calc(5em + 5vw) !important; height: calc(5em + 5vw) !important;border-radius: 50%;border:solid #ffffff 2px;">
-
-        
-        <h1 id="username">
-            <p id="channelCountry"></p>
-            <p id="channelName">UserName</p>
-        </h1>
-        <h1 class="odometer" id="odometer"></h1>
+<body id="body">
 
 
-        <br>
 
-        <div class="container">
-            <div class="boxThing2">
-                <h1 id="title2">Total Views</h1>
-                <br>
-                <h1 class="odometer" id="views">0</h1>
+    <p></p>
+
+    <div class="container">
+        <div class="row">
+            <div class="card-container col-sm-12 ">
+                <div class="card m-b-0 m-t-20">
+                    <img width="1600" height="900" class="img-fluid" src="assets/images/blank-banner.png" id="ytbanner">
+                    <img width="128" height="128" src="assets/images/blank-prp.png"
+                        class="shadow mx-auto d-block pfp rounded-circle" id="ytimage">
+                    <p></p>
+                    <h1 class="name text-center" id="channelName">YtStats</h1>
+                    <div style="margin-top: -18px;" class="main-odo d-flex justify-content-center odometer"
+                        id="subscribers"></div>
+                    <h6 class="text-center">Subscribers</h6>
+                </div>
             </div>
-            <div class="boxThing2">
-                <h1 id="title2">Total Videos</h1>
-                <br>
-                <h1 class="odometer" id="videos">0</h1>
+        </div>
+        <p></p>
+        <div class="row ">
+
+            <div class="col">
+                <a class="youtube-link" id="visitlink">
+                    <button type="button" style="color: white; background-color: #c4302b"
+                        class="btn-block btn btn-lg">
+                        <i class="fab fa-youtube" ></i> Visit on YouTube
+                    </button>
+                </a>
             </div>
-            <div class="boxThing2">
-                <h1 id="title2">Goal</h1>
-                <br>
-                <h1 class="odometer" id="goal">0</h1>
+        </div>
+
+        <p></p>
+        <div class="row">
+            <div class="goal-container col ">
+                <div class="card m-b-0 m-t-20">
+                    <div class="bottom-odo d-flex justify-content-center goal-odo odometer" id="goal"></div>
+                    <h4 class="text-center">Goal</h4>
+                </div>
             </div>
+
+            <div class="col">
+                <div class="card m-b-0 m-t-20">
+                    <div class="bottom-odo d-flex justify-content-center total-views-odo odometer" id="views"></div>
+                    <h4 class="text-center">Total Channel Views</h4>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card m-b-0 m-t-20">
+                    <div class="bottom-odo d-flex justify-content-center total-views-odo odometer" id="videos"></div>
+                    <h4 class="text-center">Total Videos</h4>
+                </div>
+            </div>
+        </div>
+
+        <p></p>
+
+
+        <h4 class="text-center offset-md-3 estimatedText"></h4>
+
+        <p></p>
+
+
+
+        <p></p>
+
+        <div class="row">
+            <div class="md1-row col-sm-12">
+                <div id="chart"></div>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div class="row">
+            <div class="col-sm-12 md1-row">
+                <div class="card" style="background-color: white;">
+                    <h4 style="margin-left: 20px; margin-top: 10px; color: rgb(0, 0, 0);">Sharing</h4>
+                    <p class="box-text text-justify" style="color: rgb(0, 0, 0);">You can share <span
+                            id="shareChannel" >This Channel</span>'s Live Subscriber Count by simply coping the link below!
+                        You can also bookmark this page by clicking CTRL+D (Windows Devices) or CMD+D (Apple Devices) to
+                        come back anytime!</p>
+                    <div style="margin-left: 20px; width: 96%;" class="input-group flex-nowrap">
+
+                        <input type="text" class="share-link form-control" onclick="copysharelink();"
+                            readonly="" id="sharelink" value="Loading..."></input>
+                    </div>
+                    <p style="color: rgb(0, 0, 0);"></p>
+                </div>
+            </div>
+
 
         </div>
-V0.0.5
 
-Added: Faster Loading Time | Goal Counter
+    </div>
+    <p></p>
+
+    </div>
+
 </body>
 
 <script src="assets/scripts/js/base.js"></script>
@@ -56,5 +123,9 @@ Added: Faster Loading Time | Goal Counter
 <script src="assets/scripts/js/url.js"></script>
 <script src="assets/global/odometer.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 </html>
