@@ -23,7 +23,7 @@ function update() {
         document.getElementById("channelName").innerText = data.userList[0].user.name
         document.getElementById("shareChannel").innerText = data.userList[0].user.name
 
-        document.getElementById("subscribers").innerText = data.userList[0].stats.subscriberCountAPI || data.userList[0].stats.subscriberCount
+        document.getElementById("subscribers").innerText = data.userList[0].stats.subscriberCount || data.userList[0].stats.subscriberCountAPI
         document.getElementById("views").innerText = data.userList[0].stats.viewCount
         document.getElementById("videos").innerText = data.userList[0].stats.videoCount
         document.getElementById("goal").innerText = data.userList[0].stats.goalCount
