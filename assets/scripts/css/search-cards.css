@@ -1,0 +1,94 @@
+
+  * {
+  
+    box-sizing: border-box;
+  
+  }
+  
+  
+  
+  body {
+  
+    background-color: white;
+  
+  }
+  
+  
+  
+  
+  
+  
+  .channelImage {
+  
+    height: 120px;
+  
+    width: 120px;
+  
+    margin-top: 5px;
+  
+    float: center;
+  
+    border-radius: 10px;
+  
+  }
+  
+  
+  
+  .channelName {
+  
+    white-space: nowrap; 
+  
+    overflow: hidden;
+  
+    text-overflow: ellipsis;
+  
+    font-family: "headfont";
+  
+    font-size: 18px;
+  
+    color: white;
+  
+    margin-top: 0px;
+  
+     text-align: center;
+  
+  }
+  
+  
+  
+  .cards-content {
+  
+    padding: 5px;
+    
+    text-overflow:inherit;
+  
+  }
+  
+  
+  
+  .cards {
+  
+    display: inline-block;
+  
+    height: 200px;
+  
+    font-size: 13px;
+  
+    width: 130px;
+  
+    border: 2px solid rgba(0,0,0,0);
+  
+    margin: 4px;
+  
+    padding: 1px;
+  
+    transition: background-color 1s;
+  
+    background-color: black;
+  
+    border-radius: 10px;
+  
+    position: relative;
+   
+    text-align: center;
+  }

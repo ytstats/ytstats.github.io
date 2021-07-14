@@ -6,7 +6,7 @@
             result.innerHTML = "";
             u = 0
             if (cid.startsWith("UC") == true) {
-                location.href = `http://127.0.0.1:5500/#?/cid}`;
+                location.href = `https://ytstats.github.io/#?/cid}`;
             } else {
                 p1.innerHTML = `
                 <div class="lds-ellipsis">
@@ -30,12 +30,20 @@
                             universeId: data1.items[u].id.channelId
                         })
                         result.innerHTML = result.innerHTML + `
-                            <div class="card-result" onclick='location.href = "http://127.0.0.1:5500/#!/${a[u].universeId}";'>
-                            <img title="${a[u].universeId}" src="${a[u].imageUrl}" height="125" width="125" id="userimg">
+                            <div class="card-result" onclick='location.href = "https://ytstats.github.io/#!/${a[u].universeId}";'>
+
+                            <div class="cards-content">
+
+                            <div class="cards">
+                            <img title="${a[u].universeId}" src="${a[u].imageUrl}" class="channelImage" height="125" width="125" id="userimg">
                             <br>
-                            <button class="form-btn">
-                                <span id="username" style="margin: 10px;" title="${a[u].universeId}">${a[u].name}</span>
-                            </button>`
+                            <br>
+                            <span id="username" style="margin: 10px;" class="channelName" title="${a[u].universeId}">${a[u].name}</span>
+                            
+                            </div>
+
+                            </div>`
+
                         u++
                         sd()
 
