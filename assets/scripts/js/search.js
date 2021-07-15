@@ -6,7 +6,7 @@
             result.innerHTML = "";
             u = 0
             if (cid.startsWith("UC") == true) {
-                location.href = `https://ytstats.github.io/#?/cid}`;
+                location.href = `https://ytstats.github.io/#?/${cid}`;
             } else {
                 p1.innerHTML = `
                 <div class="lds-ellipsis">
