@@ -12,12 +12,12 @@ setInterval(() => {
 function update() {
 
     
-    $.getJSON('https://beta.mixerno.space/api/youtube-subscriber-counter/channel/' + ChannelID, function (data) {
+    $.getJSON('https://beta.mixerno.space/api/youtube-subscriber-counter/channel/' + "UC3CeKXNtheO1jvomemi07FA", function (data) {
 
     
 
-        document.title = data.userList[0].user.name + " | YtStats";
-
+        document.title = data.userList[0].user.name + " | NazCounts";
+        document.querySelector("#pageIcon").href = data.userList[0].user.avatar.default.url;
         
 
         document.getElementById("channelName").innerText = data.userList[0].user.name
@@ -34,7 +34,7 @@ function update() {
         document.getElementById("ytbanner").src = data.userList[0].user.banner;
         document.getElementById('visitlink').href = 'https://www.youtube.com/channel/'+data.userList[0].user.id
 
-        document.getElementById("sharelink").value = "https://ytstats.github.io/#!/" + data.userList[0].user.id
+        document.getElementById("sharelink").value = "https://NazCounts.github.io/#!/" + data.userList[0].user.id
 
 
         // document.getElementById("pageIcon").src = data.items[0].brandingSettings.channel.image.bannerExternalUrl;
