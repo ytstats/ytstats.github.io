@@ -12,7 +12,7 @@ setInterval(() => {
 function update() {
 
     
-    $.getJSON('https://beta.mixerno.space/api/youtube-subscriber-counter/channel/' + "UC3CeKXNtheO1jvomemi07FA", function (data) {
+    $.getJSON('https://beta.mixerno.space/api/youtube-subscriber-counter/channel/' + ChannelID, function (data) {
 
     
 
