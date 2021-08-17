@@ -1,45 +1,170 @@
-.odometer {
-    font-size: 32px;
-    font-family: 'Roboto', sans-serif;
-    color: #000000;
+@font-face {
+
+  font-family: "bodyfont";
+
+  src: url("fonts/Roboto-Bold.ttf");
+
 }
+
+
+
+@font-face {
+
+  font-family: "headfont";
+
+  src: url("fonts/CaviarDreams_Bold.ttf");
+
+}
+
+
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+
+body {
+
+  background-color: rgb(43, 43, 43);
+
+}
+
+
+
+.odometer {
+
+  font-size: 32px;
+
+  font-family : "bodyfont";
+
+  color: rgb(0, 0, 0);
+
+}
+
+
 
 .channelImage {
-    border-radius: 50%;
-    height: 65x;
-    width: 65px;
-    float: left;
-    margin-right: 10px;
+
+  height: 76px;
+
+  width: 76px;
+
+  margin-top: -1px;
+
+  margin-left: -0.5px;
+
+  float: left;
+
+ margin-right: 10px;
+
 }
+
+
 
 .channelName {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #000000;
+
+  white-space: nowrap; 
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  font-family: "bodyfont";
+
+  font-size: 20px;
+
+  color: black;
+
+  margin-top: 0px;
+
 }
+
+
 
 .card-content {
-    padding: 5px;
+
+  padding: 5px;
+
 }
 
+
+
 .card {
-    display: inline-block;
-    background-color: rgb(255, 255, 255);
-    height: 80px;
-    font-size: 23px;
-    width: 300px;
-    border: 3px solid rgb(0, 0, 0);
-    height: 75px;
-    font-size: 13px;
-    width: 300px;
-    border: 1px solid rgb(172, 170, 170);
-     border-radius: 75px;
-     margin: 4px;
-     padding: 4px;
-    transition: background-color 1s;
-     /* background-image: url("none");  */
-    background-color: rgb(255, 255, 255);
+
+  display: inline-block;
+
+  height: 80px;
+
+  font-size: 13px;
+
+  width: 300px;
+
+  border: 2px solid rgba(0,0,0,0);
+
+  margin: 1.5px;
+
+  padding: 1px;
+
+  transition: background-color 1s;
+
+  background-color: white;
+
+  position: relative;
+
+}
+
+/* 
+  @-webkit-keyframes argh-my-eyes {
+  from   { background-color: rgb(255, 255, 255); }
+  to { background-color: #0011ff; 
+  color: white;}
+  }
+  @-moz-keyframes argh-my-eyes {
+  from   { background-color: rgb(255, 255, 255); }
+  to { background-color: #green; 
+  color: white;}
+  }
+  @keyframes argh-my-eyes {
+  from   { background-color: rgb(255, 255, 255); }
+  to { background-color: #grey;
+  color: white;
+  } */
+
+  }
+  .channel_1 {
+  -webkit-animation: argh-my-eyes 5s infinite alternate;*/
+  -moz-animation:    argh-my-eyes 5s infinite alternate;*/
+  animation:         argh-my-eyes 10s infinite alternate;*/
+  }
+
+
+@keyframes animate {
+
+  0%
+
+  {
+
+    background-position: 0 0;
+
+  }
+
+  50%
+
+  {
+
+    background-position: 300% 0;
+
+  }
+
+  100%
+
+  {
+
+    background-position: 0 0;
+
+  }
+
 }

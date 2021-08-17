@@ -5,8 +5,9 @@ window.onload = function () {
 
  setTimeout(() => {
 	loadURL();
+    console.log("Wall Name  : "+ChannelID)
     fn60sec();
- }, 1000);
+ }, 500);
  setInterval(() => {
 	loadURL();
     fn60sec();
@@ -34,7 +35,7 @@ let ChannelID
 
 
 
-var channelcount = 15;
+var channelcount = 18;
 var chanName = "NazCounts.cf";
 var bgColor = "rgba(255, 255, 255,)";
 var imgUrl = "https://yt3.ggpht.com/-UojVTXXFUmQ/AAAAAAAAAAI/AAAAAAAAAAA/r2bMFQbWHv4/s360-c-k-no-mo-rj-c0xffffff/photo.jpg";
@@ -54,7 +55,6 @@ let channelImage = [];
 let subscriberCount = [];
     // $.getJSON("https://api.nazcounts.cf/wall/search/"+ChannelID+"", function (channels) {
     await $.getJSON("https://api.nazcounts.cf/wall/search/"+ChannelID+"", function (channels) {
-        console.log(ChannelID)
 
     channelList = channels.reverse();
     googleApiCallURL = 'https://api.mgcounts.com/youtube/bulk/'+channelList+'';
