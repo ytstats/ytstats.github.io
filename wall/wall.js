@@ -1,4 +1,36 @@
-var channelcount = 12;
+
+var thislocation = window.location.href +"/"
+
+window.onload = function () {
+    fn60sec();
+
+ setInterval(() => {
+	loadURL();
+ }, 1000);
+    
+}
+let ChannelID
+ function loadURL() {
+
+	var q = location.hash.split("!/")[1];
+    
+	if (q) {
+		
+        ChannelID = location.hash.split("!/")[1]
+	} else {
+
+		ChannelID = "UC3CeKXNtheO1jvomemi07FA"
+	}
+
+	
+        history.pushState(null, null, "#!/" + ChannelID);
+		return thislocation + "#!/" + ChannelID;
+}
+
+
+
+
+var channelcount = 15;
 var chanName = "NazCounts.cf";
 var bgColor = "rgba(255, 255, 255,)";
 var imgUrl = "https://yt3.ggpht.com/-UojVTXXFUmQ/AAAAAAAAAAI/AAAAAAAAAAA/r2bMFQbWHv4/s360-c-k-no-mo-rj-c0xffffff/photo.jpg";
@@ -18,6 +50,7 @@ let channelImage = [];
 let subscriberCount = [];
     // $.getJSON("https://api.nazcounts.cf/wall/search/"+ChannelID+"", function (channels) {
     $.getJSON("https://api.nazcounts.cf/wall/search/"+ChannelID+"", function (channels) {
+        console.log(ChannelID)
 
     channelList = channels.reverse();
     googleApiCallURL = 'https://api.mgcounts.com/youtube/bulk/'+channelList+'';
@@ -38,5 +71,4 @@ let subscriberCount = [];
     });
 });
 }
-fn60sec();
 setInterval(fn60sec, 10000);
