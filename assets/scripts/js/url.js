@@ -17,7 +17,7 @@ window.onload = function () {
 		
         ChannelID = location.hash.split("!/")[1]
 	} else {
-		var coolGuys = [ 'UCFclAVMvm32SoYQmOr6gxpA', 'UCYozYDE_yUduCTV_J-6_DpA', 'UCTDivGmXSiFlsgQSShfFHmg','UC3CeKXNtheO1jvomemi07FA'];
+		var coolGuys = ['UC3CeKXNtheO1jvomemi07FA'];
 		ChannelID = coolGuys[Math.floor(Math.random() * coolGuys.length)]
 	}
 

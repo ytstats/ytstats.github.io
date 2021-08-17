@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-2 flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="../index.html" role="tab"
+                    aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link active" id="v-pills-settings-tab" data-toggle="pill" href="#" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">Shoutout Wall Maker</a>
+            </div>
+            <div class="col">
+                <center>
+                    <h1>Open Existing Wall</h1>
+
+                    <br>
+                    <input type="text" placeholder="Existing Wall Name" class="form-control" id="search-input"></input>
+
+                    <br>
+                    <button type="button" class="btn btn-success mx-auto">
+                        <span class="button__icon">
+                            <ion-icon name="search"></ion-icon>
+                            </span>
+                        <span class="button__text" id="search-btn">Search</span>
+                        
+
+                        </ion-icon>
+                    </button>
+                </center>
+
+            </div>
+            <div class="col">
+                <center>
+                    <h1>Create A New Wall</h1>
+                    <br>
+                    <input type="text" placeholder="Enter New Wall Name" class="form-control" id="create-input"></input>
+
+                    <br>
+                    <button type="button" class="btn btn-primary">
+                        <span class="button__icon">
+                            <ion-icon name="add-circle"></ion-icon>
+                            </span>
+                        <span class="button__text" id="create-btn">create</span>
+                    </button>
+                </center>
+            </div>
+        </div>
+
+</body>
+<script src="wall-maker.js"></script>
+</html>
