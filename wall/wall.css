@@ -1,27 +1,10 @@
-@font-face {
-
-  font-family: "bodyfont";
-
-  src: url("fonts/Roboto-Bold.ttf");
-
-}
-
-
-
-@font-face {
-
-  font-family: "headfont";
-
-  src: url("fonts/CaviarDreams_Bold.ttf");
-
-}
-
 
 
 * {
 
   box-sizing: border-box;
-
+  font-family: "Varela Round";
+   
 }
 
 
@@ -36,9 +19,9 @@ body {
 
 .odometer {
 
-  font-size: 32px;
+  font-size: 64px;
+  /* font-family: 'Patrick Hand SC', cursive; */
 
-  font-family : "bodyfont";
 
   color: rgb(0, 0, 0);
 
@@ -48,17 +31,17 @@ body {
 
 .channelImage {
 
-  height: 76px;
+  height: 152px;
 
-  width: 76px;
+  width: 152px;
 
-  margin-top: -1px;
+  margin-top: -2px;
 
-  margin-left: -0.5px;
+  margin-left: -1px;
 
   float: left;
 
- margin-right: 10px;
+ margin-right: 20px;
 
 }
 
@@ -72,9 +55,10 @@ body {
 
   text-overflow: ellipsis;
 
-  font-family: "bodyfont";
+  /* font-family: 'Patrick Hand SC', cursive; */
 
-  font-size: 20px;
+
+  font-size: 40px;
 
   color: black;
 
@@ -86,7 +70,7 @@ body {
 
 .card-content {
 
-  padding: 5px;
+  padding: 10px;
 
 }
 
@@ -96,15 +80,15 @@ body {
 
   display: inline-block;
 
-  height: 80px;
+  height: 160px;
 
-  font-size: 13px;
+  font-size: 26px;
 
-  width: 300px;
+  width: 600px;
 
-  border: 2px solid rgba(0,0,0,0);
+  border: 5px solid rgba(0,0,0,0);
 
-  margin: 1.5px;
+  margin: 3px;
 
   padding: 1px;
 
@@ -131,14 +115,15 @@ body {
   from   { background-color: rgb(255, 255, 255); }
   to { background-color: #grey;
   color: white;
-  } */
+  } 
 
-  }
-  .channel_1 {
-  -webkit-animation: argh-my-eyes 5s infinite alternate;*/
-  -moz-animation:    argh-my-eyes 5s infinite alternate;*/
-  animation:         argh-my-eyes 10s infinite alternate;*/
-  }
+  }*/
+
+  /* .channel_1 {
+  -webkit-animation: argh-my-eyes 5s infinite alternate;
+  -moz-animation:    argh-my-eyes 5s infinite alternate;
+  animation:         argh-my-eyes 10s infinite alternate;
+  } */
 
 
 @keyframes animate {
