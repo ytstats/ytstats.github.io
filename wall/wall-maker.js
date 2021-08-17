@@ -13,7 +13,7 @@ document.getElementById("create-btn").onclick = function () {
                 
                 return alert(data)
             } else {
-                location.href = "../#!/" + document.getElementById('create-input').value + " "
+                location.href = "../wall/#!/" + document.getElementById('create-input').value + " "
             }
         })
 }
@@ -29,7 +29,7 @@ document.getElementById("search-btn").onclick = function () {
             if (data.includes("🟡" || "🔴")) {
                 return alert(data)
             } else {
-                // location.href = "../wall/#!/" + wallID
+                location.href = "../wall/#!/" + wallID
                 console.log(wallID + "    NEW")
             }
         })
