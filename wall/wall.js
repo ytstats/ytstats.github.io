@@ -2,11 +2,15 @@
 var thislocation = window.location.href +"/"
 
 window.onload = function () {
-    fn60sec();
 
+ setTimeout(() => {
+	loadURL();
+    fn60sec();
+ }, 1000);
  setInterval(() => {
 	loadURL();
- }, 1000);
+    fn60sec();
+ }, 10000);
     
 }
 let ChannelID
@@ -42,14 +46,14 @@ while (iterationcard <= channelcount) {
     $('body').append(htmlcard);
     iterationcard++;
 };
-function fn60sec() {
+async function fn60sec() {
 let googleApiCallURL = "";
 let channelList = [];
 let channelName = [];
 let channelImage = [];
 let subscriberCount = [];
     // $.getJSON("https://api.nazcounts.cf/wall/search/"+ChannelID+"", function (channels) {
-    $.getJSON("https://api.nazcounts.cf/wall/search/"+ChannelID+"", function (channels) {
+    await $.getJSON("https://api.nazcounts.cf/wall/search/"+ChannelID+"", function (channels) {
         console.log(ChannelID)
 
     channelList = channels.reverse();
@@ -71,4 +75,3 @@ let subscriberCount = [];
     });
 });
 }
-setInterval(fn60sec, 10000);
