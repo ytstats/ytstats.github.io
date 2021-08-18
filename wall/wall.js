@@ -39,8 +39,8 @@ var channelcount = 18;
 var chanName = "NazCounts.cf";
 var bgColor = "rgba(255, 255, 255,)";
 var imgUrl = "https://yt3.ggpht.com/-UojVTXXFUmQ/AAAAAAAAAAI/AAAAAAAAAAA/r2bMFQbWHv4/s360-c-k-no-mo-rj-c0xffffff/photo.jpg";
-$('body').css("background",bgColor);
-$('body').css("background", bgColor);
+$('wall').css("background",bgColor);
+$('wall ').css("background", bgColor);
 let iterationcard = 1;
 while (iterationcard <= channelcount) {
         var htmlcard = '<div class="channel_' + iterationcard + ' card"><img src="' + imgUrl + '" class="channelImage"><div class="card-content"><div class="channelName">' + chanName + '</div><div class="odometer subscriberCount">0</div></div></div>';  
