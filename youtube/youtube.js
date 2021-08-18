@@ -14,6 +14,7 @@ function update() {
     
     $.getJSON('https://beta.mixerno.space/api/youtube-subscriber-counter/channel/' + ChannelID, function (data) {
 
+            
     
 
         document.title = data.userList[0].user.name + " | NazCounts";
@@ -34,7 +35,9 @@ function update() {
         document.getElementById("ytbanner").src = data.userList[0].user.banner;
         document.getElementById('visitlink').href = 'https://www.youtube.com/channel/'+data.userList[0].user.id
 
-        document.getElementById("sharelink").value = "https://NazCounts.github.io/#!/" + data.userList[0].user.id
+        document.getElementById("sharelink").value = "https://NazCounts.cf/#!/" + data.userList[0].user.id
+        document.getElementById("embedlink").value = "https://NazCounts.cf/youtube/embed/#!/" + data.userList[0].user.id
+
 
 
         // document.getElementById("pageIcon").src = data.items[0].brandingSettings.channel.image.bannerExternalUrl;
@@ -50,12 +53,23 @@ function update() {
 }
 
 function copysharelink() {
-    console.log("aaaaaa")
-    var copyText = document.getElementById("sharelink");
 
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); 
-  
-  
-    document.execCommand("copy");
+    
+        var copyText = document.getElementById("sharelink");
+    
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); 
+    
+
+
+};
+
+
+function copyembedlink() {
+    
+        var copyText = document.getElementById("embedlink");
+    
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); 
+        document.execCommand("copy");
 };

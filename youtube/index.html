@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="referrer" content="no-referrer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NazCounts" />
+    <meta property="og:title" content="NazCounts | YouTube Live Subscriber Count" />
+    <meta property="og:description"
+        content="NazCounts is the easiest way to view live subscriber count of any YouTuber on the planet! Simply enter the channel name, or ID and you are good to go!" />
+    <meta property="og:image" content="assets/images/blank-prp.png" />
+
+    <meta name="title" content="NazCounts | YouTube Live Subscriber Count">
+    <title>NazCounts | YouTube Live Subscriber Count</title>
+    <meta name="description"
+        content="NazCounts is the easiest way to view live subscriber count of any YouTuber on the planet! Simply enter the channel name, or ID and you are good to go!">
+    <meta name="keywords"
+        content="mixerno.space, nextcounts, nazcounts, live subscriber count, social blade, akshatmittal,">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Nazmul">
+    <link id="pageIcon" rel="icon" type="image/png" sizes="250x250" href="assets/images/blank-prp.png">
+
+
+    <link rel=stylesheet href="../assets/global/odometer.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="body">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-2 flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="../index.html" role="tab"
+                    aria-controls="v-pills-home" aria-selected="true">YouTube</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/wall/maker.html" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">Shoutout Wall Maker</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/wall/stats.html" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">Shoutout Wall Stats</a>
+            </div>
+            <div class="card-container col-md-8 ">
+                <div class="card m-b-0 m-t-20">
+                    <img width="1600" height="900" class="img-fluid" src="../assets/images/blank-banner.png" id="ytbanner">
+                    <img width="128" height="128" src="../assets/images/blank-prp.png"
+                        class="shadow mx-auto d-block pfp rounded-circle" id="ytimage">
+                    <p></p>
+                    <h1 class="name text-center" id="channelName">NazCounts</h1>
+                    <div style="margin-top: -18px;" class="main-odo d-flex justify-content-center odometer"
+                        id="subscribers">000</div>
+                    <h6 class="text-center">Subscribers</h6>
+                </div>
+            </div>
+        </div>
+        <p></p>
+        <div class="row ">
+            <div class="col-md-2">
+                
+            </div>
+            <div class="col-md-4">
+                <a class="youtube-link" id="visitlink">
+                    <button type="button" style="color: white; background-color: #c4302b" class="btn-block btn btn-lg">
+                        <i class="fab fa-youtube"></i> Visit on YouTube
+                    </button>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="search.html">
+                    <button type="button" class="btn-block btn btn-success btn-lg" data-toggle="modal">
+                        <i class="fas fa-search" href="/search.html"></i> Change User
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <p></p>
+        <div class="row">
+            <div class="col-md-2">
+                
+            </div>
+            <div class="goal-container col-md-2 ">
+                <div class="card m-b-0 m-t-20">
+                    <div class="bottom-odo d-flex justify-content-center goal-odo odometer" id="goal"></div>
+                    <h4 class="text-center">Goal</h4>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card m-b-0 m-t-20">
+                    <div class="bottom-odo d-flex justify-content-center total-views-odo odometer" id="views"></div>
+                    <h4 class="text-center">Total Channel Views</h4>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card m-b-0 m-t-20">
+                    <div class="bottom-odo d-flex justify-content-center total-views-odo odometer" id="videos"></div>
+                    <h4 class="text-center">Total Videos</h4>
+                </div>
+            </div>
+        </div>
+
+        <p></p>
+
+
+        <h4 class="text-center offset-md-3 estimatedText"></h4>
+
+        <p></p>
+
+
+
+        <p></p>
+
+
+        <div class="row">
+            <div class="col-md-2">
+                
+            </div>
+            <div class="col-sm-8 md1-row">
+                <div class="card" style="background-color: white;">
+                    <h4 style="margin-left: 20px; margin-top: 10px; color: rgb(0, 0, 0);">Sharing</h4>
+                    <p class="box-text text-justify" style="color: rgb(0, 0, 0);">You can share <span
+                            id="shareChannel">This Channel</span>'s Live Subscriber Count by simply coping the link
+                        below!
+                        You can also bookmark this page by clicking CTRL+D (Windows Devices) or CMD+D (Apple Devices) to
+                        come back anytime!</p>
+                    <div style="margin-left: 20px; width: 96%;" class="input-group flex-nowrap">
+
+                        <input type="text" class="share-link form-control" onclick="copysharelink();" readonly=""
+                            id="sharelink" value="Loading..."></input>
+                        <br>
+                        <br>
+                        <h4 style="margin-left: 20px; margin-top: 10px; color: rgb(0, 0, 0);">Embed This Counter!</h4>
+
+                            <input type="text" class="embed-link form-control" onclick="copyembedlink();" readonly=""
+                            id="embedlink" value="Loading..."></input>
+                    </div>
+                    <p style="color: rgb(0, 0, 0);"></p>
+                </div>
+                <div class="card" style="background-color: white;">
+                    <h4 style="margin-left: 20px; margin-top: 10px; color: rgb(0, 0, 0);">Thank you for using NazCounts
+                    </h4>
+                    <p class="box-text text-justify" style="color: rgb(0, 0, 0);">You can get in touch with me on <a
+                            href="https://discord.gg/HQ87XadPUU">Discord</a> Do let me know if you have any feedback or
+                        ideas for this project!</p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <p></p>
+
+    </div>
+
+</body>
+
+<script src="../assets/scripts/js/base.js"></script>
+<script src="youtube.js"></script>
+<script src="url.js"></script>
+<script src="assets/global/odometer.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</html>
