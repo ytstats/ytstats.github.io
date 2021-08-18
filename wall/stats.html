@@ -29,7 +29,7 @@
                 <a class="nav-link active" id="v-pills-settings-tab" data-toggle="pill" href="#" role="tab"
                     aria-controls="v-pills-settings" aria-selected="false">Shoutout Wall Stats</a>
             </div>
-            
+
             <div class="col-md-8">
                 <center>
                     <h1>Wall Name.</h1>
@@ -55,25 +55,25 @@
 <script>
     document.getElementById("search-btn").onclick = function () {
 
-let wallID = document.getElementById('search-input').value
-console.log(wallID)
+        let wallID = document.getElementById('search-input').value
+        console.log(wallID)
 
-fetch('https://api.nazcounts.cf/wall/all')
-    .then(response => response.text())
-    .then(data => {
-         if (data.includes("🟡" || "🔴")) {
-            alert(data);
-         }
-        // else{
-        //    document.getElementById("wall-name").innerText = "Error, Please Try Again."
-        //    document.getElementById("wall-invite").innerText = "Wall Not Found."
-        // }
-        else {
-            document.getElementById("wall-name").innerText = "Wall Name: "+wallID
-           document.getElementById("wall-invite").innerText = `$(urlfetch https://api.nazcounts.cf/wall/add/${wallID}/$(userid))`
-        }
-    })
-}
+        fetch('https://api.nazcounts.cf/wall/all')
+            .then(response => response.text())
+            .then(data => {
+                if (data.includes("🟡" || "🔴")) {
+                    alert(data);
+                }
+                // else{
+                //    document.getElementById("wall-name").innerText = "Error, Please Try Again."
+                //    document.getElementById("wall-invite").innerText = "Wall Not Found."
+                // }
+                else {
+                    document.getElementById("wall-name").innerText = "Wall Name: " + wallID
+                    document.getElementById("wall-invite").innerText = `$(urlfetch https://api.nazcounts.cf/wall/add/${wallID}/$(userid))`
+                }
+            })
+    }
 </script>
 
 </html>
