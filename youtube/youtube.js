@@ -10,7 +10,7 @@ setInterval(() => {
 
 
 async function update() {
-
+    
     
     await $.getJSON('https://api.nextcounts.com/api/youtube/channel/' + ChannelID, function (data) {
 
@@ -25,7 +25,7 @@ async function update() {
         document.getElementById("shareChannel").innerText = data.username
 
         document.getElementById("subscribers").innerText = data.subcount
-        document.getElementById("views").innerText = data.viewCount
+        document.getElementById("views").innerText = data.viewcount
         document.getElementById("videos").innerText = data.videos
         document.getElementById("goal").innerText = 69
 
@@ -33,10 +33,10 @@ async function update() {
 
         document.getElementById("ytimage").src = data.userImg;
         document.getElementById("ytbanner").src = data.userBanner;
-        document.getElementById('visitlink').href = 'https://www.youtube.com/channel/'+data.userList[0].user.id
+        document.getElementById('visitlink').href = 'https://www.youtube.com/channel/'+ChannelID
 
-        document.getElementById("sharelink").value = "https://NazCounts.ga/#!/" + data.userList[0].user.id
-        document.getElementById("embedlink").value = "https://NazCounts.ga/youtube/embed/#!/" + data.userList[0].user.id
+        document.getElementById("sharelink").value = "https://NazCounts.ga/#!/" + ChannelID
+        document.getElementById("embedlink").value = "https://NazCounts.ga/youtube/embed/#!/" + ChannelID
 
 
 

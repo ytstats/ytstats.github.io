@@ -5,7 +5,7 @@ window.onload = function () {
 
  setInterval(() => {
 	loadURL();
- }, 1000);
+ }, 500);
     
 }
 
