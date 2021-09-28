@@ -27,7 +27,7 @@ async function update() {
         document.getElementById("subscribers").innerText = data.subcount
         document.getElementById("views").innerText = data.viewCount
         document.getElementById("videos").innerText = data.videos
-        document.getElementById("goal").innerText = data.videos
+        document.getElementById("goal").innerText = 69
 
 
 
