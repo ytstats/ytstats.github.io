@@ -9,34 +9,34 @@ setInterval(() => {
 }, interval);
 
 
-function update() {
+async function update() {
 
     
-    $.getJSON('https://beta.mixerno.space/api/youtube-subscriber-counter/channel/' + ChannelID, function (data) {
+    await $.getJSON('https://api.nextcounts.com/api/youtube/channel/' + ChannelID, function (data) {
 
             
     
 
-        document.title = data.userList[0].user.name + " | NazCounts";
-        document.querySelector("#pageIcon").href = data.userList[0].user.avatar.default.url;
+        document.title = data.username + " | NazCounts";
+        document.querySelector("#pageIcon").href = data.userImg;
         
 
-        document.getElementById("channelName").innerText = data.userList[0].user.name
-        document.getElementById("shareChannel").innerText = data.userList[0].user.name
+        document.getElementById("channelName").innerText = data.username
+        document.getElementById("shareChannel").innerText = data.username
 
-        document.getElementById("subscribers").innerText = data.userList[0].stats.subscriberCount || data.userList[0].stats.subscriberCountAPI
-        document.getElementById("views").innerText = data.userList[0].stats.viewCount
-        document.getElementById("videos").innerText = data.userList[0].stats.videoCount
-        document.getElementById("goal").innerText = data.userList[0].stats.goalCount
+        document.getElementById("subscribers").innerText = data.subcount
+        document.getElementById("views").innerText = data.viewCount
+        document.getElementById("videos").innerText = data.videos
+        document.getElementById("goal").innerText = data.videos
 
 
 
-        document.getElementById("ytimage").src = data.userList[0].user.avatar.default.url;
-        document.getElementById("ytbanner").src = data.userList[0].user.banner;
+        document.getElementById("ytimage").src = data.userImg;
+        document.getElementById("ytbanner").src = data.userBanner;
         document.getElementById('visitlink').href = 'https://www.youtube.com/channel/'+data.userList[0].user.id
 
-        document.getElementById("sharelink").value = "https://NazCounts.cf/#!/" + data.userList[0].user.id
-        document.getElementById("embedlink").value = "https://NazCounts.cf/youtube/embed/#!/" + data.userList[0].user.id
+        document.getElementById("sharelink").value = "https://NazCounts.ga/#!/" + data.userList[0].user.id
+        document.getElementById("embedlink").value = "https://NazCounts.ga/youtube/embed/#!/" + data.userList[0].user.id
 
 
 
