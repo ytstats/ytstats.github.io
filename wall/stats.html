@@ -61,17 +61,7 @@
         fetch('https://api.nazcounts.cf/wall/all')
             .then(response => response.text())
             .then(data => {
-                if (data.includes("🟡" || "🔴")) {
-                    alert(data);
-                }
-                // else{
-                //    document.getElementById("wall-name").innerText = "Error, Please Try Again."
-                //    document.getElementById("wall-invite").innerText = "Wall Not Found."
-                // }
-                else {
-                    document.getElementById("wall-name").innerText = "Wall Name: " + wallID
-                    document.getElementById("wall-invite").innerText = `$(urlfetch https://api.nazcounts.cf/wall/add/${wallID}/$(userid))`
-                }
+
             })
     }
 </script>
