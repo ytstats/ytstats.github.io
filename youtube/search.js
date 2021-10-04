@@ -6,7 +6,7 @@
             result.innerHTML = "";
             u = 0
             if (cid.startsWith("UC") == true) {
-                location.href = `https://nazcounts.cf/#!/${cid}`;
+                location.href = `https://www.nazcounts.ga/youtube/#!/${cid}`;
             } else {
                 p1.innerHTML = `
                 <div class="lds-ellipsis">
@@ -30,7 +30,7 @@
                             universeId: data1.items[u].id.channelId
                         })
                         result.innerHTML = result.innerHTML + `
-                            <div class="card-result" onclick='location.href = "https://nazcounts.cf/#!/${a[u].universeId}";'>
+                            <div class="card-result" onclick='location.href = "https://www.nazcounts.ga/#!/${a[u].universeId}";'>
 
                             <div class="cards-content">
 
