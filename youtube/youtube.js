@@ -22,15 +22,6 @@ try {
         .then(data => {
   // await $.getJSON('https://api.nazcounts.ga/youtube/channel/' + ChannelID, function (data) {
 
-    function GetGoal(count) {
-        if (count < 10) return 10;
-        var x1 = Math.floor(Math.log10(count));
-        var x2 = Math.ceil(count / 10 ** x1);
-        var x3 = x2 * 10 ** x1;
-        var goal = x3 - count;
-        return goal
-    }
-
 
     document.title = data.username + " | NazCounts";
     document.querySelector("#pageIcon").href = data.logo;
@@ -42,7 +33,7 @@ try {
     document.getElementById("subscribers").innerText = data.values.subs
     document.getElementById("views").innerText = data.values.views
     document.getElementById("videos").innerText = data.values.videos
-    document.getElementById("goal").innerText = GetGoal(data.values.subs)
+    document.getElementById("goal").innerText = data.values.goal
 
 
 
