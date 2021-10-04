@@ -23,7 +23,7 @@ try {
   // await $.getJSON('https://api.nazcounts.ga/youtube/channel/' + ChannelID, function (data) {
 
 
-    document.title = data.username + " | NazCounts";
+    document.title = data.name + " | NazCounts";
     document.querySelector("#pageIcon").href = data.logo;
 
 
